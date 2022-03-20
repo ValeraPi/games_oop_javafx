@@ -1,10 +1,11 @@
+
 package ru.job4j.puzzle;
 
 public class Win {
-    public static boolean check(int[][] board) {
+    public static boolean check(int[][] table) {
         boolean rsl = false;
-        for (int i = 0; i < board.length; i++) {
-            if (board[i][i] == 1 && (monoHorizontal(board, i) || monoVertical(board, i))) {
+        for (int i = 0; i < table.length; i++) {
+            if (table[i][i] == 1 && (monoHorizontal(table, i) || monoVertical(table, i))) {
                 rsl = true;
                 break;
             }
@@ -12,10 +13,10 @@ public class Win {
         return rsl;
     }
 
-    public static boolean monoHorizontal(int[][] board, int row) {
+    public static boolean monoHorizontal(int[][] table, int row) {
         boolean result = true;
-        for (int i = 0; i < board.length; i++) {
-            if (board[row][i] != 1) {
+        for (int i = 0; i < table.length; i++) {
+            if (table[row][i] != 1) {
                 result = false;
                 break;
             }
@@ -23,10 +24,10 @@ public class Win {
         return result;
     }
 
-    public static boolean monoVertical(int[][] board, int column) {
+    public static boolean monoVertical(int[][] table, int cell) {
         boolean result = true;
-        for (int i = 0; i < board.length; i++) {
-            if (board[i][column] != 1) {
+        for (int i = 0; i < table.length; i++) {
+            if (table[i][cell] != 1) {
                 result = false;
                 break;
             }
