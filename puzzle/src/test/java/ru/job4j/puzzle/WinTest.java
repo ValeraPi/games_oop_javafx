@@ -5,8 +5,8 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-
 public class WinTest {
+
     @Test
     public void whenVerticalWin() {
         int[][] board = {
